@@ -1,0 +1,38 @@
+@import '../main_style.scss';
+
+.filters-box-wrapper {
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-wrap: wrap; // go next line when overflow
+
+    margin-right: 1vw;
+
+    width: fit-content;
+
+    /* width */
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 5px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #aaa;
+        border-radius: 5px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #888;
+    }
+}
+
+.filter-box {
+    display: flex;
+    float: left;
+}

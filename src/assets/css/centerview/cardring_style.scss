@@ -1,0 +1,76 @@
+@import '../main_style.scss';
+@import "node_modules/mathsass/dist/math";
+
+$pi: 3.1415;
+$open-distance: $cards-open-distance;
+$opening-angle: $cards-opening-angle;
+
+.card-ring-wrapper {
+    width: 0px;
+    height: 0px;
+
+    left: 100%;
+
+    position: relative;
+    transform-origin: center;
+
+    display: inline-block;
+    position: absolute;
+}
+
+@mixin card-ring-item($item-number) {
+  z-index: 1;
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  transition: transform ease-out 200ms;
+
+  @for $i from 1 through $item-number {
+    $angle: ((0 - $opening-angle)/2)+(($opening-angle/($item-number - 1))*($i - 1));
+    &:nth-child(#{$i}) {
+      transition-duration: 500ms;
+      transform: translate3d(
+        calc( cos($angle)*$open-distance ), 
+        calc( sin($angle)*$open-distance ), 0 ) scale(1);
+    }
+  }
+}
+@mixin card-ring-index($index-number) {}
+
+
+.size-0 { @include card-ring-item(0) }
+.size-1 { @include card-ring-item(1) }
+.size-2 { @include card-ring-item(2) }
+.size-3 { @include card-ring-item(3) }
+.size-4 { @include card-ring-item(4) }
+.size-5 { @include card-ring-item(5) }
+.size-6 { @include card-ring-item(6) }
+.size-7 { @include card-ring-item(7) }
+.size-8 { @include card-ring-item(8) }
+.size-9 { @include card-ring-item(9) }
+.size-10 { @include card-ring-item(10) }
+.size-11 { @include card-ring-item(11) }
+.size-12 { @include card-ring-item(12) }
+
+.index-0 { @include card-ring-index(1)}
+.index-1 { @include card-ring-index(2)}
+.index-2 { @include card-ring-index(3)}
+.index-3 { @include card-ring-index(4)}
+.index-4 { @include card-ring-index(5)}
+.index-5 { @include card-ring-index(6)}
+.index-6 { @include card-ring-index(7)}
+.index-7 { @include card-ring-index(8)}
+.index-8 { @include card-ring-index(9)}
+.index-9 { @include card-ring-index(10)}
+.index-10 { @include card-ring-index(11)}
+.index-11 { @include card-ring-index(12)}
+
+.card-ring-enter-active,
+.card-ring-leave-active {
+  transition: 2s;
+}
+
+.card-ring-enter-from,
+.card-ring-leave-to {
+  opacity: 0;
+}

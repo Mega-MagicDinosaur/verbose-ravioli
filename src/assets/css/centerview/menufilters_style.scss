@@ -1,0 +1,51 @@
+@import '../main_style.scss';
+@import "node_modules/mathsass/dist/math";
+
+$pi: 3.1415;
+$open-distance: 180px;
+$opening-angle: $pi/2;
+
+.menu-icon { font-size: 22px; }
+
+.menu-filters-wrapper { // don't touch, it just works :)
+  position: relative;
+  transform-origin: center;
+
+  left: 0%;
+  top: -55%; // 55% is because of icon size, so offset is applied
+}
+
+@mixin menu-filters-item($item-number) {
+  z-index: 1;
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  transition: transform ease-out 200ms;
+
+  @for $i from 1 through $item-number {
+    $angle: ((0 - $opening-angle)/2)+(($opening-angle/($item-number - 1))*($i - 1));
+    &:nth-child(#{$i}) {
+      transition-duration: 500ms;
+      transform: translate3d(cos($angle)*$open-distance, sin($angle)*$open-distance, 0) scale(1);
+    }
+  }
+}
+
+.size-1 { @include menu-filters-item(1) }
+.size-2 { @include menu-filters-item(2) }
+.size-3 { @include menu-filters-item(3) }
+.size-4 { @include menu-filters-item(4) }
+.size-5 { @include menu-filters-item(5) }
+.size-6 { @include menu-filters-item(6) }
+.size-7 { @include menu-filters-item(7) }
+.size-8 { @include menu-filters-item(8) }
+
+.list-enter-active,
+.list-leave-active {
+  transition: 2s;
+}
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+}

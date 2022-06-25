@@ -1,0 +1,31 @@
+@import '../main_style.scss';
+
+.nav-button-icon {
+    display: flex;
+    position: relative;
+    
+    // enable this if you want the icon to be centered in navbar
+    left: calc($icon-offset * -0.5);
+
+    // use this to resize icons
+    // font-size does not work since .material-icons overrides it
+    // (not even !important works) :(
+
+    transform: scale(1.2);
+    
+    color: $exhausted-icon-color;
+
+    margin-left: auto; // center items horizontally
+    margin-right: auto;
+}
+
+.nav-button-link {
+    &:hover { // for some reason display flex adds text-deco, so this is required
+        text-decoration: none;
+    }
+}
+
+.primary-button {
+    color: $primary-color;
+}
+

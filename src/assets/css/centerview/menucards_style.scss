@@ -1,0 +1,49 @@
+@import '../main_style.scss';
+@import "node_modules/mathsass/dist/math";
+
+$pi: 3.1415;
+$open-distance: $cards-menu-open-distance;
+$offset: $cards-offset;
+$opening-angle: $pi/2;
+
+.menu-cards-wrapper { // don't touch, it just works :)
+  position: relative;
+  transform-origin: center;
+
+  left: 50%;
+  top: -50%;
+}
+
+@mixin menu-cards-item($item-number) {
+  z-index: 1;
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  transition: transform ease-out 200ms;
+
+  @for $i from 1 through $item-number {
+    $angle: ((0 - $opening-angle)/2)+($opening-angle/2); // linear angle
+    &:nth-child(#{$i}) {
+      transition-duration: 500ms;
+      transform: translate3d(
+        calc( cos($angle)*($offset + $open-distance*$i) ), 
+        calc( sin($angle)*$open-distance ), 0) scale(1);
+    }
+  }
+}
+
+.size-1 { @include menu-cards-item(1) }
+.size-2 { @include menu-cards-item(2) }
+.size-3 { @include menu-cards-item(3) }
+.size-4 { @include menu-cards-item(4) }
+.size-5 { @include menu-cards-item(5) }
+
+.card-rings-enter-active,
+.card-rings-leave-active {
+  transition: 2s;
+}
+
+.card-rings-enter-from,
+.card-rings-leave-to {
+  opacity: 0;
+}

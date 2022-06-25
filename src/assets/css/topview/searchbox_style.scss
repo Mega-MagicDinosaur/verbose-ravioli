@@ -1,0 +1,40 @@
+@import '../main_style.scss';
+
+.active-filters-label {
+    margin: 0vh 1.5vw 0vh 1vw;
+
+    font-family: $text-font;
+    color: $text-color;
+}
+
+.filters-box {
+    display: flex;
+
+    font-family: $text-font;
+    color: $text-color;
+}
+
+.submit-button {
+    width: fit-content;
+    height: fit-content;
+
+    align-self: center;
+
+    margin: 0vh 0.5vw;
+    margin-left: auto; // align x to the right
+}
+
+.domain-button {
+    align-self: center;
+
+    margin: 0vh 0.5vw;
+}
+
+.found-companies-label {
+    font-family: $text-font;
+    font-size: 12px;
+
+    align-self: center;
+
+    color: $text-color;
+}

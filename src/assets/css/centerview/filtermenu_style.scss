@@ -1,0 +1,99 @@
+@import '../main_style.scss';
+
+.menu-item, .filter-menu-wrapper {
+    position: relative;
+    list-style: none;
+    
+    margin: 0 auto;
+    
+    text-decoration: none;
+    text-align: center;
+}
+.menu-item, .menu-title, .google-icon { cursor: pointer; }
+.menu-item .menu-text { padding-left: 5px; }
+
+.google-icon { 
+    position: relative;
+
+    font-size: 28px;
+
+    color: $primary-color;
+}
+.menu-title { 
+    position: relative;
+    display: inline;
+
+    padding: 0px 0px 0px 15px;
+
+    vertical-align: top;
+}
+.menu-item {
+    clear: both;
+    
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0px 20px 0px 0px;
+    
+    text-align: left;
+    border-style: none;
+
+    &:hover .menu-text{
+        padding-left: 10px;
+        transition: all 0.3s ease;
+    }
+}
+.filter-menu-wrapper {
+    padding: 0 15px;
+
+    &:hover .menu-title {
+        margin: 0px 0px 0px 10px;
+        padding: 0px 40px 0px 80px;
+        border-bottom: 2px solid $primary-color;
+    }
+
+    &:hover .dropdown {
+        display: block;
+        position: absolute;
+        pointer-events: all;
+
+        visibility: visible;
+        opacity: 1;
+    }
+}
+.dropdown {
+    position: absolute;
+    pointer-events: none;
+
+    margin: 0px;
+    padding: 10px 20px 0px 080px;
+    left: 45px;
+
+    text-align: left;
+
+    background: transparent;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+    &:hover {
+        display: block;
+        position: absolute;
+        pointer-events: all;
+    
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &:hover .menu-title {
+        margin: 0px 0px 0px 10px;
+        padding: 0px 40px 0px 80px;
+        border-bottom: 2px solid $primary-color;
+    }
+}
+.menu-text {    
+    transition: all 0.5s ease; 
+
+    text-decoration: none;
+    font-size: 16px;
+    font-family: $text-font;
+    color: $text-color;
+}

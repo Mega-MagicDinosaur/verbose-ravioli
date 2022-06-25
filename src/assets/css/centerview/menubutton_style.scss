@@ -1,0 +1,26 @@
+@import '../main_style.scss';
+
+.button:hover { background: $tertiary-color; }
+.button {
+  border: 4px solid $tertiary-color;
+  background: $secondary-color;
+
+  cursor: pointer;
+}
+
+.google-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: $primary-color;
+
+  font-size: 40px;
+  width: 100%;
+  height: 100%;
+  
+  text-align: center;
+  
+  transform: scale(1) rotate(315deg);
+}

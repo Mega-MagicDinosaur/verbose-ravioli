@@ -1,0 +1,14 @@
+@import '../main_style.scss';
+
+.delete-button {
+    display: flex;
+    align-items: center;
+
+    transform: scale(0.7);
+
+    padding: 0px; // override button padding
+}
+
+.label-text {
+    font-size: 12px;
+}

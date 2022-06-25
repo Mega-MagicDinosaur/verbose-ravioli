@@ -1,0 +1,13 @@
+@import '../main_style.scss';
+
+.view-title-wrapper {
+    float: left;
+
+    margin: 0vh 1.5vw; // revise later, might give problems with responsive design
+    padding: 2vh 0vw;
+}
+
+.title, .subtitle {
+    font-family: $text-font;
+    color: $text-color;
+}

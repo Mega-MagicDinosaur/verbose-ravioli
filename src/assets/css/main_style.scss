@@ -1,0 +1,42 @@
+// IMPORTS
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+$pi: 3.1415;
+
+// PRIMARY SETTINGS
+
+$primary-color: #4E8CFC;
+$secondary-color: #FFFFFF;
+$tertiary-color: #F5F6FB;
+
+$text-color: #17294A;
+
+$exhausted-icon-color: #6A7FA4;
+
+$background-color: #F5F6FB;
+
+$text-font: 'Montserrat', sans-serif;
+
+// NAVBAR SETTINGS
+
+$navbar-width: 75px;
+
+$topview-height: 150px;
+
+$icon-offset: 8px;
+
+// RADAR MENU SETTINGS
+
+$radar-menu-width: 45vmin;
+$radar-menu-height: 45vmin;
+
+$radar-menu-scale: 0.8;
+
+// CARDS SETTINGS
+
+$cards-offset: -180px;
+
+$cards-open-distance: 45vmin;
+$cards-opening-angle: $pi/2;
+$cards-menu-open-distance: 0px;

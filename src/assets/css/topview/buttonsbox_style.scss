@@ -1,0 +1,24 @@
+@import '../main_style.scss';
+
+.buttons-box-wrapper { 
+    margin-right: 1vw;
+}
+
+.button-focused {
+    // something maybe change shadow
+}
+
+.button-unfocused {
+    opacity: 0.5;
+}
+
+.button-text {
+    font-family: $text-font;
+    color: $text-color;
+
+    font-size: 8px;
+
+    margin-bottom: 0px; // override ptag margin-bottom
+
+    text-align: center;
+}
