@@ -4,7 +4,6 @@ class Box {
         this.checked = false
     }
 }
-
 class Filter {
     constructor(name, icon, boxes) {
         this.name = name
@@ -16,8 +15,7 @@ class Filter {
         return this.boxes.filter(box => box.checked == true).length
     }
 }
-
-class Company {
+class Company { // make employees a tuple
     constructor(
         name, country, website,
         primary_sector, other_sectors, products,
@@ -37,6 +35,8 @@ class Company {
         this.img = img
     }
 }
+
+/* - COMPANIES - */
 
 const companies = [
     new Company('name1', 'country1', 'https://web1',
@@ -85,6 +85,8 @@ const companies = [
         'some_text_here! 9', 'https://img')
 ]
 
+/* - GRAPH STRUCTURE - */
+
 const rings = [ [
         companies[0],
         companies[1],
@@ -99,6 +101,7 @@ const rings = [ [
         companies[8],
     ], ]
 
+/* - FILTERS - */
 
 const filters = [
     [
@@ -134,6 +137,8 @@ const filters = [
         new Filter('filter24', 'group', [new Box('box1'), new Box('box2'), new Box('box3')]),
     ],
 ]
+
+/* EXPORT */
 
 export { filters }
 export { companies }

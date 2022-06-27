@@ -7,7 +7,7 @@
       <VerticalNav class="vertical-nav" :icons="nav_icons" :primary_button="1"/>
 
       <div class="top-view-wrapper">
-        <ViewTitle class="view-title" title="RadarView" subtitle="Move freely to find out" />
+        <ViewTitle class="view-title" title="Radar View" subtitle="Move freely to find out" />
         <FiltersEditor class="filters-editor" :filters="this.filters" :buttons="this.buttons" :state="this.state" />
       </div> 
       <div class="center-view-wrapper">
@@ -48,7 +48,7 @@ export default {
     ViewTitle,
     RoundMenu,
     SubmitButton
-},
+  },
   data() { return {
       buttons: buttons,
       filters: filters,
