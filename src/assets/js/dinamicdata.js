@@ -96,7 +96,17 @@ const rings = [
         companies[3],
         companies[6],
         companies[7],
-        companies[8],]
+        companies[8],
+        companies[0],
+        companies[1],
+        companies[2],
+        companies[4],
+        companies[5],
+        companies[3],
+        companies[6],
+        companies[7],
+        companies[8],
+    ]
 
 /* - FILTERS - */
 

@@ -1,8 +1,20 @@
 @import '../main_style.scss';
 
+.table-row {
+    display: table-row;
+
+    background-color: $secondary-color;
+    border-radius: 10px;
+
+    margin: 1vh 0vw;
+}
+
 .table-row * {
+    text-align: center;
+    vertical-align: middle;
+
     font-family: $text-font;
-    font-size: 14px;
+    font-size: 12px;
 
     margin-right: .5vw;
 }

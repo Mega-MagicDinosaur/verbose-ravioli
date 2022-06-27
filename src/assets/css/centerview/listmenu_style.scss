@@ -1,11 +1,39 @@
 @import '../main_style.scss';
 
-.menu-item {
+.table-header {
+    display: table-row;
+
+    position: sticky;
+    top: 0;
+
+    background-color: $background-color;
+}
+
+.menu-item-wrapper {
+    display: table-cell;
+
+    text-align: center;
+    vertical-align: middle;
+
     font-family: $text-font;
     font-size: 11px;
     font-weight: 500;
+}
 
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 20px;
+.menu-item {
+    cursor: pointer;
+
+    width: fit-content;
+    height: fit-content;
+
+    border-radius: 4px;
+}
+
+.item-text {
+    // margin has to be on text and not menu-item, since otherwise empty menu-items would inflate as well.
+    margin: 2px 8px;
+}
+
+.selected-item {
+    background-color: #D8DBE8;
 }
