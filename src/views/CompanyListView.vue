@@ -9,7 +9,7 @@
                 <FiltersEditor class="filters-editor" :filters="this.filters" :buttons="this.buttons" :state="this.state" />
             </div> 
             <div class="center-view-wrapper">
-                <CompanyList :companies="rings[0]"/>
+                <CompanyList :companies="this.rings"/>
             </div>
         </div>
     </main>
@@ -49,5 +49,10 @@ export default {
 }
 </script>
 
-<style lang="scss" src="../assets/css/generics/app_style.scss">
+<style lang="scss">
+@import "../assets/css/generics/app_style.scss";
+
+.center-view-wrapper {
+    overflow-y: scroll;
+}
 </style>

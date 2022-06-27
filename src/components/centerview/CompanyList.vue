@@ -1,16 +1,11 @@
 <template>
     <div class="company-list-wrapper">
-        <table>
+        <table class="table">
             <ListMenu class="list-menu"/>
-            <ListItem class="list-item" v-for="(company) in this.companies" 
-            :key="company" :company="company" />
+            
+            <ListItem class="list-item" v-for="(company, index) in this.companies" :key="company"
+            :company="company" :score="index"/>
         </table>
-
-        <VueTableLite
-        :is-loading="false"
-        :columns="[1, 2, 3, 4, 5]"
-        :rows="[1, 2, 3, 4, 5]"
-        ></VueTableLite>
     </div>
 </template>
 
@@ -32,5 +27,5 @@ export default {
 }
 </script>
 
-<style scoped lang="scss" src="../../assets/css/centerview/companylist_style.scss">
+<style lang="scss" src="../../assets/css/centerview/companylist_style.scss">
 </style>

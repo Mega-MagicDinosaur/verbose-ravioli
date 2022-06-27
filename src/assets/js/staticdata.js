@@ -10,7 +10,6 @@ class Button {
     }
 }
 
-
 const buttons = [
     new Button('geographical',  'public',       'text1', filters[0], 0),
     new Button('trends',        'trending_up',  'text2', filters[1], 1),
@@ -26,5 +25,21 @@ const nav_icons = [
     {icon: 'newspaper', url: '#'},
 ]
 
+const menu_settings = [
+    {name: ''},
+    {name: ''},
+    {name: 'warm score'},
+    {name: 'company name'},
+    {name: 'primary selector'},
+    {name: 'turnover'},
+    {name: 'employees'},
+    {name: 'products'},
+    {name: 'country'},
+    {name: 'on-scope'},
+    {name: ''},
+    {name: 'label'},
+]
+
 export { buttons }
 export { nav_icons }
+export { menu_settings }

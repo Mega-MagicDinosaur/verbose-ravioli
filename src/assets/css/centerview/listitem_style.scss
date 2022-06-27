@@ -1,3 +1,13 @@
-.list-item-wrapper * {
+@import '../main_style.scss';
+
+.table-row * {
+    font-family: $text-font;
+    font-size: 14px;
+
     margin-right: .5vw;
+}
+
+.sub-label {
+    color: $primary-color;
+    font-size: 9px;
 }
