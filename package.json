@@ -13,6 +13,7 @@
     "core-js": "^3.8.3",
     "mathsass": "^0.11.0",
     "vue": "^3.2.37",
+    "vue-animejs": "^2.1.1",
     "vue-router": "^4.0.3",
     "vue3-table-lite": "^1.2.3",
     "vuex": "^4.0.0"

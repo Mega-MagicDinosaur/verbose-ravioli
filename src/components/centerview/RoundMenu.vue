@@ -6,8 +6,10 @@
       @clicked="clicked" :button="item" />
       <CenterButton class="center-button" />
     </div>
+    <!-- v-show and v-if are important -->
+    <!-- menu cards uses v-if since otherwise animations on mounted() would not. -->
     <MenuFilters v-show="(this.state.str == 'filters')" class="menu-filters" :filters="this.filters"/>
-    <MenuCards v-show="(this.state.str == 'cards')" class="menu-cards" :rings="this.rings_data"/>
+    <MenuCards v-if="(this.state.str == 'cards')" class="menu-cards" :rings="this.rings_data"/>
   </div>
 </template>
 

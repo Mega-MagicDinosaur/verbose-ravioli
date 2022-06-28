@@ -90,15 +90,3 @@ $pi: 3.1415;
 .size-10-3 { @include card-ring-item(10, 3) }
 .size-11-3 { @include card-ring-item(11, 3) }
 .size-12-3 { @include card-ring-item(12, 3) }
-
-// ANIMATIONS
-
-.card-ring-enter-active,
-.card-ring-leave-active {
-  transition: 2s;
-}
-
-.card-ring-enter-from,
-.card-ring-leave-to {
-  opacity: 0;
-}

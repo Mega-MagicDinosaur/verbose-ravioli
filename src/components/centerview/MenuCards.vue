@@ -1,7 +1,6 @@
 <template>
 <div class="menu-cards-wrapper">
-  <CardRing v-for="(ring, index) in this.rings" :key="ring" :ring="ring"  :index="(index+1)"
-  :class="['size-'+this.rings.length, 'index-'+index]"/>
+  <CardRing v-for="(ring, index) in this.rings" :key="ring" :ring="ring"  :index="(index+1)"/>
 </div>
 </template>
 
@@ -12,7 +11,7 @@ export default {
     name: "MenuCards",
     components: { CardRing },
     props: {
-        rings: Array
+        rings: Array,
     },
 }
 </script>

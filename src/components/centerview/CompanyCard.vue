@@ -1,16 +1,23 @@
 <template>
-    <div class="company-card-wrapper">
+    <div class="company-card-wrapper" ref="card">
         <div class="company-card">
-            <p>{{this.card.name}}</p>
+            <span>{{this.card.name}}</span>
         </div>
     </div>
 </template>
 
 <script>
+import { mounted_card } from '../../animate.js'
+
 export default {
     name: 'CompanyCard',
     props: {
-        card: Object
+        card: Object,
+        card_index: Number,
+        ring_index: Number,
+    },
+    mounted() {
+        mounted_card(this.$refs.card, this.ring_index, this.card_index)
     }
 }
 </script>
