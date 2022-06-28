@@ -9,7 +9,7 @@
                 <FiltersEditor class="filters-editor" :filters="this.filters" :buttons="this.buttons" :state="this.state" />
             </div> 
             <div class="center-view-wrapper">
-                <CompanyList :companies="this.rings"/>
+                <CompanyList :companies="this.rings[0]"/>
             </div>
         </div>
     </main>

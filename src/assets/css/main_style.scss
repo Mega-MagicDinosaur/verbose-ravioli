@@ -35,8 +35,16 @@ $radar-menu-scale: 0.8;
 
 // CARDS SETTINGS
 
-$cards-offset: -180px;
+$cards-offset: 0px;
 
-$cards-open-distance: 45vmin;
-$cards-opening-angle: $pi/2;
+// attention! if radius ($cards-open-distance) is allowed to be less than centerview-height,
+// program crashes since asin (arcsin) of more than 1 is NaN.
+// seems like minimum is 42.5 vh...
+
+$ring-radius: (
+    ring-radius1: 50vmin,
+    ring-radius2: 100vmin,
+    ring-radius3: 150vmin,
+);
+
 $cards-menu-open-distance: 0px;

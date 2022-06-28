@@ -1,15 +1,15 @@
+@use "sass:map";
+
 @import '../main_style.scss';
 @import "node_modules/mathsass/dist/math";
 
 $pi: 3.1415;
-$open-distance: $cards-open-distance;
-$opening-angle: $cards-opening-angle;
 
 .card-ring-wrapper {
     width: 0px;
     height: 0px;
 
-    left: 100%;
+    left: 0%;
 
     position: relative;
     transform-origin: center;
@@ -18,52 +18,80 @@ $opening-angle: $cards-opening-angle;
     position: absolute;
 }
 
-@mixin card-ring-item($item-number) {
+@mixin card-ring-item($item-number, $ring-number) {
   z-index: 1;
   display: inline-block;
   position: absolute;
   white-space: nowrap;
   transition: transform ease-out 200ms;
 
+  $ring-open-distance: map.get($ring-radius, (ring-radius#{$ring-number}) );
+
   @for $i from 1 through $item-number {
+    $opening-angle: calc( 
+      asin( 
+        ( (100vmin - 15vmin)/2 ) /
+          $ring-open-distance
+        ) * 2 
+    );
+
     $angle: ((0 - $opening-angle)/2)+(($opening-angle/($item-number - 1))*($i - 1));
     &:nth-child(#{$i}) {
       transition-duration: 500ms;
       transform: translate3d(
-        calc( cos($angle)*$open-distance ), 
-        calc( sin($angle)*$open-distance ), 0 ) scale(1);
+        calc( cos($angle)*$ring-open-distance ), 
+        calc( sin($angle)*$ring-open-distance ), 0 ) scale(1);
     }
   }
 }
 @mixin card-ring-index($index-number) {}
 
+// INDEX 1
+.size-0-1 { @include card-ring-item(0, 1) }
+.size-1-1 { @include card-ring-item(1, 1) }
+.size-2-1 { @include card-ring-item(2, 1) }
+.size-3-1 { @include card-ring-item(3, 1) }
+.size-4-1 { @include card-ring-item(4, 1) }
+.size-5-1 { @include card-ring-item(5, 1) }
+.size-6-1 { @include card-ring-item(6, 1) }
+.size-7-1 { @include card-ring-item(7, 1) }
+.size-8-1 { @include card-ring-item(8, 1) }
+.size-9-1 { @include card-ring-item(9, 1) }
+.size-10-1 { @include card-ring-item(10, 1) }
+.size-11-1 { @include card-ring-item(11, 1) }
+.size-12-1 { @include card-ring-item(12, 1) }
 
-.size-0 { @include card-ring-item(0) }
-.size-1 { @include card-ring-item(1) }
-.size-2 { @include card-ring-item(2) }
-.size-3 { @include card-ring-item(3) }
-.size-4 { @include card-ring-item(4) }
-.size-5 { @include card-ring-item(5) }
-.size-6 { @include card-ring-item(6) }
-.size-7 { @include card-ring-item(7) }
-.size-8 { @include card-ring-item(8) }
-.size-9 { @include card-ring-item(9) }
-.size-10 { @include card-ring-item(10) }
-.size-11 { @include card-ring-item(11) }
-.size-12 { @include card-ring-item(12) }
+// INDEX 2
+.size-0-2 { @include card-ring-item(0, 2) }
+.size-1-2 { @include card-ring-item(1, 2) }
+.size-2-2 { @include card-ring-item(2, 2) }
+.size-3-2 { @include card-ring-item(3, 2) }
+.size-4-2 { @include card-ring-item(4, 2) }
+.size-5-2 { @include card-ring-item(5, 2) }
+.size-6-2 { @include card-ring-item(6, 2) }
+.size-7-2 { @include card-ring-item(7, 2) }
+.size-8-2 { @include card-ring-item(8, 2) }
+.size-9-2 { @include card-ring-item(9, 2) }
+.size-10-2 { @include card-ring-item(10, 2) }
+.size-11-2 { @include card-ring-item(11, 2) }
+.size-12-2 { @include card-ring-item(12, 2) }
 
-.index-0 { @include card-ring-index(1)}
-.index-1 { @include card-ring-index(2)}
-.index-2 { @include card-ring-index(3)}
-.index-3 { @include card-ring-index(4)}
-.index-4 { @include card-ring-index(5)}
-.index-5 { @include card-ring-index(6)}
-.index-6 { @include card-ring-index(7)}
-.index-7 { @include card-ring-index(8)}
-.index-8 { @include card-ring-index(9)}
-.index-9 { @include card-ring-index(10)}
-.index-10 { @include card-ring-index(11)}
-.index-11 { @include card-ring-index(12)}
+// INDEX 3
+.size-0-3 { @include card-ring-item(0, 3) }
+.size-1-3 { @include card-ring-item(1, 3) }
+.size-2-3 { @include card-ring-item(2, 3) }
+.size-3-3 { @include card-ring-item(3, 3) }
+.size-4-3 { @include card-ring-item(4, 3) }
+.size-5-3 { @include card-ring-item(5, 3) }
+.size-6-3 { @include card-ring-item(6, 3) }
+.size-7-3 { @include card-ring-item(7, 3) }
+.size-8-3 { @include card-ring-item(8, 3) }
+.size-9-3 { @include card-ring-item(9, 3) }
+.size-10-3 { @include card-ring-item(10, 3) }
+.size-11-3 { @include card-ring-item(11, 3) }
+.size-12-3 { @include card-ring-item(12, 3) }
+
+// ANIMATIONS
 
 .card-ring-enter-active,
 .card-ring-leave-active {

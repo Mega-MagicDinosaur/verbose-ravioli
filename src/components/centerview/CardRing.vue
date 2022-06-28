@@ -1,7 +1,8 @@
 <template>
 <div class="card-ring-wrapper">
     <TransitionGroup name="card-ring">
-        <CompanyCard v-for="(card) in this.ring" :key="card" :card="card" :class="'size-'+this.ring.length"/>
+        <CompanyCard v-for="(card) in this.ring" :key="card" :card="card" 
+        :class="'size-'+this.ring.length+'-'+this.index"/>
     </TransitionGroup>
 </div>
 </template>
@@ -13,7 +14,8 @@ export default {
     name: "CardRing",
     components: { CompanyCard },
     props: {
-        ring: Array
+        ring: Array,
+        index: Number
     },
 }
 </script>
