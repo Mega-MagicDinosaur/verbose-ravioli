@@ -5,5 +5,10 @@
 .table {
     display: table;
 
+    // maybe use border-collapse: separate;
+    // also border-spacing: 20px;
+
+    border-collapse: collapse;
+
     width: 100%;
 }

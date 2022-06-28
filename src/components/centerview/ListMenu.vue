@@ -2,7 +2,10 @@
     <div class="table-header">
         <th class="menu-item-wrapper" v-for="(setting, index) in this.menu_settings" :key="setting" >
             <div class="menu-item" :class="(index == this.selected) ? 'selected-item' : ''"
-            @click="$emit('clicked', index)"> <span :class="(setting.name != '')? 'item-text' : ''">{{setting.name}}</span> </div>
+            @click="$emit('clicked_menu', index)"> 
+            <span :class="(setting.name != '')? 'item-text' : ''">
+                {{setting.name}}</span> 
+            </div>
             <!-- maybe in add empty attribute to setting -->
         </th>
     </div>
@@ -19,7 +22,7 @@ export default {
     props: {
         selected: {
             type: Number,
-            default: 2
+            default: 0
         }
     }
 }

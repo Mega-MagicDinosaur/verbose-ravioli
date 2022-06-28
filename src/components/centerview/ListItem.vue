@@ -9,27 +9,34 @@
         <td><span class="item-label">{{ this.company.employees }}</span> </td>
         <td>
             <span class="item-label">{{ this.company.products[0] }} 
-                <span class="sub-label">+{{this.company.products.length-1}} More </span>
+                <span v-show="this.company.products.length>1" 
+                class="sub-label">+{{this.company.products.length-1}} More </span>
             </span> 
         </td>
         
         <td><span class="item-label">{{ this.company.country }}</span> </td> <!-- eventually an image maybe?? -->
 
         <td><input class="item-scope" type="checkbox" /> </td> <!-- this should be a star!! -->
-        <td><button>SEE MORE</button> </td>
-        <td><button>icon</button> </td>
+        <td><SubmitButton text="SEE MORE" :active="this.selected"/> </td>
+        <td><SubmitButton text="icon"/> </td>
     </div>
 </template>
 
 <script>
+import SubmitButton from '../generics/SubmitButton.vue'
+
 export default {
     name: 'ListItem',
+    components: {
+        SubmitButton
+    },
     props: {
         company: Object,
         score: {
             default: 0,
             tyle: Number
         },
+        selected: Boolean
     },
 }
 </script>

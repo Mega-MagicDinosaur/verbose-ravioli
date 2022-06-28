@@ -7,6 +7,8 @@
     border-radius: 10px;
 
     margin: 1vh 0vw;
+
+    border-top: 8px solid $background-color;
 }
 
 .table-row * {
@@ -17,6 +19,16 @@
     font-size: 12px;
 
     margin-right: .5vw;
+}
+
+td:first-child,
+th:first-child {
+  border-radius: 12px 0px 0px 12px;
+}
+
+td:last-child,
+th:last-child {
+  border-radius: 0px 12px 12px 0px;
 }
 
 .sub-label {

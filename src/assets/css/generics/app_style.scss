@@ -16,6 +16,8 @@
     height: calc(100% - $topview-height);
 
     left: $navbar-width;
+
+    overflow: hidden;
 }
 
 .nordlys-button {

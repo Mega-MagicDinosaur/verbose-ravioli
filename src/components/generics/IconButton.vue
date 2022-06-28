@@ -15,7 +15,7 @@ export default {
         GoogleIcon
     },
     props: {
-        icon: String
+        icon: String,
     },
 }
 </script>

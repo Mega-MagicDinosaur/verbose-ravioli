@@ -2,9 +2,10 @@
     <div class="company-list-wrapper">
         <div class="table">
             <ListMenu class="list-menu" :selected="this.selected_menu_item"
-            @clicked="clicked"/>
-            <ListItem class="list-item" v-for="(company, index) in this.companies" 
-            :key="company" :company="company" :score="index"/>
+            @clicked_menu="clicked_menu"/>
+            <ListItem class="list-item" :selected="(selected_list_item == index)? true : false" 
+            v-for="(company, index) in this.companies" :key="company" 
+            :company="company" :score="index" @click="clicked_item(index)"/>
         </div>
     </div>
 </template>
@@ -26,11 +27,11 @@ export default {
     },
     data() { return {
         selected_menu_item: 0,
+        selected_list_item: 0,
     }},
     methods: {
-        clicked(index) {
-            this.selected_menu_item = index
-        }
+        clicked_menu(index) { this.selected_menu_item = index },
+        clicked_item(index) { this.selected_list_item = index }
     }
 }
 </script>

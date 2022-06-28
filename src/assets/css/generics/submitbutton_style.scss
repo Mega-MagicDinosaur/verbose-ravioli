@@ -1,14 +1,24 @@
 @import '../main_style.scss';
 
 .submit-button {
-    background-color: $primary-color;
-    color: $secondary-color;
-    
     border-radius: 12px;
-    border: none;
 
     font-family: $text-font;
     font-size: 15px;
 
     white-space: nowrap; // display text in one line
+}
+
+.active {
+    background-color: $primary-color;
+    color: $secondary-color;
+    
+    border: 1px solid $primary-color;
+}
+
+.inactive {
+    background-color: $secondary-color;
+    color: $primary-color;
+
+    border: 1px solid $primary-color;
 }

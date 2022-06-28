@@ -1,6 +1,7 @@
 <template>
     <div class="submit-button-wrapper">
-        <button type="button" class="btn btn-primary submit-button">{{text}}</button>
+        <button type="button" class="btn submit-button" 
+        :class="(this.active == true)? 'btn-primary active' : 'btn-outline-primary inactive'">{{text}}</button>
     </div>
 </template>
 
@@ -9,6 +10,10 @@ export default {
     name: 'SubmitButton',
     props: {
         text: String,
+        active: {
+            type: Boolean,
+            default: true
+        }
     },
 }
 </script>
