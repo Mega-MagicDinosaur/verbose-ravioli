@@ -25,19 +25,27 @@ const nav_icons = [
     { icon: 'newspaper', url: '#' },
 ]
 
+// SORT SETTINGS
+const order_by_score = companies => companies.sort((a,b) => b.score-a.score)
+const order_by_name = companies => companies.sort((a,b) => ('' + a.name).localeCompare(b.name))
+const order_by_turnover = companies => companies.sort((a,b) => a.turnover-b.turnover)
+const order_by_employees = companies => companies.sort((a,b) => b.employees-a.employees) // eventually change to a[1]
+const order_by_products = companies => companies.sort((a,b) => b.products.length-a.products.length)
+
+// SETTINGS
 const menu_settings = [
-    { name: '' },
-    { name: '' },
-    { name: 'warm score' },
-    { name: 'company name' },
-    { name: 'primary selector' },
-    { name: 'turnover' },
-    { name: 'employees' },
-    { name: 'products' },
-    { name: 'country' },
-    { name: 'on-scope' },
-    { name: '' },
-    { name: 'label' },
+    { name: '', sortable: [false, null] },
+    { name: '', sortable: [false, null] },
+    { name: 'warm score', sortable: [true, order_by_score] },
+    { name: 'company name', sortable: [true, order_by_name] },
+    { name: 'primary selector', sortable: [false, null] },
+    { name: 'turnover', sortable: [true, order_by_turnover] },
+    { name: 'employees', sortable: [true, order_by_employees] },
+    { name: 'products', sortable: [true, order_by_products] },
+    { name: 'country', sortable: [false, null] },
+    { name: 'on-scope', sortable: [false, null] },
+    { name: '', sortable: [false, null] },
+    { name: 'label', sortable: [false, null] },
 ]
 
 const side_menu_icons = [

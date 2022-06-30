@@ -21,19 +21,45 @@
 }
 
 .menu-item {
+    display: flex;
     cursor: pointer;
 
     width: fit-content;
     height: fit-content;
 
     border-radius: 4px;
+
+    white-space: nowrap;
 }
 
 .item-text {
     // margin has to be on text and not menu-item, since otherwise empty menu-items would inflate as well.
-    margin: 2px 8px;
+    display: flex;
+    align-items: center;
+    margin: 2px 8px 2px 8px;
 }
 
 .selected-item {
     background-color: #D8DBE8;
+
+    & .google-icon { color: $secondary-color; }
+}
+
+.sort-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.google-icon { 
+    color: #C4C4DA;
+    font-size: 13px;
+
+    margin: 0px 6px 0px -4px; // negative margin is to save space in item-text margin
+
+    // same width&height as font size
+    text-align: center;
+
+    &.up { transform: scale(1) rotate(90deg); }
+
+    &.down { transform: scale(1) rotate(-90deg); }
 }

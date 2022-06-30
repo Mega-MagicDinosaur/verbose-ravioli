@@ -20,7 +20,7 @@ class Company { // make employees a tuple
         name, country, website,
         primary_sector, other_sectors, products,
         turnover, employees, foundation_year,
-        about, img
+        about, img, score
     ) {
         this.name = name
         this.country = country
@@ -33,6 +33,7 @@ class Company { // make employees a tuple
         this.foundation_year = foundation_year
         this.about = about
         this.img = img
+        this.score = score
     }
 }
 
@@ -42,47 +43,47 @@ const companies = [
     new Company('name1', 'country1', 'https://web1',
         'sector1', ['sector_1o', 'sector_2o'], ['product_1', 'product_2'],
         100, 10, 1950,
-        'some_text_here! 1', 'https://img'),
+        'some_text_here! 1', 'https://img', 50),
 
     new Company('name2', 'country2', 'https://web2',
         'sector2', ['sector_1o', 'sector_2o'], ['product_1', 'product_2'],
         100, 10, 1950,
-        'some_text_here! 2', 'https://img'),
+        'some_text_here! 2', 'https://img', 25),
 
     new Company('name3', 'country3', 'https://web3',
         'sector3', ['sector_1o', 'sector_2o'], ['product_1', 'product_2'],
         100, 10, 1950,
-        'some_text_here! 3', 'https://img'),
+        'some_text_here! 3', 'https://img', 75),
 
     new Company('name4', 'country4', 'https://web4',
         'sector4', ['sector_1o', 'sector_2o'], ['product_1', 'product_2'],
         100, 10, 1950,
-        'some_text_here! 4', 'https://img'),
+        'some_text_here! 4', 'https://img', 12),
 
     new Company('name5', 'country5', 'https://web5',
         'sector5', ['sector_1o', 'sector_2o'], ['product_1', 'product_2'],
         100, 10, 1950,
-        'some_text_here! 5', 'https://img'),
+        'some_text_here! 5', 'https://img', 15),
 
     new Company('name6', 'country6', 'https://web6',
         'sector6', ['sector_1o', 'sector_2o'], ['product_1', 'product_2'],
         100, 10, 1950,
-        'some_text_here! 6', 'https://img'),
+        'some_text_here! 6', 'https://img', 14),
 
     new Company('name7', 'country7', 'https://web7',
         'sector7', ['sector_1o', 'sector_2o'], ['product_1', 'product_2'],
         100, 10, 1950,
-        'some_text_here! 7', 'https://img'),
+        'some_text_here! 7', 'https://img', 18),
 
     new Company('name9', 'country8', 'https://web8',
         'sector8', ['sector_1o', 'sector_2o'], ['product_1', 'product_2'],
         100, 10, 1950,
-        'some_text_here! 8', 'https://img'),
+        'some_text_here! 8', 'https://img', 1),
 
     new Company('name10', 'country9', 'https://web9',
         'sector9', ['sector_1o', 'sector_2o'], ['product_1', 'product_2'],
         100, 10, 1950,
-        'some_text_here! 9', 'https://img')
+        'some_text_here! 9', 'https://img', 99)
 ]
 
 /* - GRAPH STRUCTURE - */
@@ -93,6 +94,11 @@ const rings = [
         companies[1],
         companies[2],
         companies[3],
+        companies[4],
+        companies[5],
+        companies[6],
+        companies[7],
+        companies[8], 
     ], [
         companies[3],
         companies[4],
@@ -149,6 +155,8 @@ const filters = [
 ]
 
 /* EXPORT */
+
+export { Company }
 
 export { filters }
 export { companies }

@@ -1,7 +1,7 @@
 <template>
     <div class="company-list-wrapper">
         <div class="table">
-            <ListMenu class="list-menu" :selected="this.selected_menu_item"
+            <ListMenu class="list-menu" :selected="this.selected_menu_item" :companies="companies"
             @clicked_menu="clicked_menu"/>
             <ListItem class="list-item" :selected="(selected_list_item == index)? true : false" 
             v-for="(company, index) in this.companies" :key="company" 
@@ -13,14 +13,12 @@
 <script>
 import ListItem from './ListItem.vue'
 import ListMenu from './ListMenu.vue'
-import VueTableLite from 'vue3-table-lite'
 
 export default {
     name: 'CompanyList',
     components: {
         ListItem,
         ListMenu,
-        VueTableLite
     },
     props: {
         companies: Array

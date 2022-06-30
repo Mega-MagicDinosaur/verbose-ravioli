@@ -17,8 +17,6 @@
 
   font-family: $text-font;
   font-size: 12px;
-
-  margin-right: .5vw;
 }
 
 td:first-child,
@@ -37,5 +35,6 @@ th:last-child {
 }
 
 .item-scope button span {
-  color: yellow !important;
+   // color: yellow !important; not working
+   text-align: center; // just filler
 }
