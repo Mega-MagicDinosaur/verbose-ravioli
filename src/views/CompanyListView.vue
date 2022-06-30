@@ -3,6 +3,9 @@
     <main>
         <div class="view-wrapper">
             <VerticalNav class="vertical-nav" :icons="nav_icons" :primary_button="2"/>
+            
+            <!-- hidden nav menu -->
+            <SideMenu :company="this.selected_company" />
 
             <div class="top-view-wrapper">
                 <ViewTitle class="view-title" title="Company List" subtitle="All results in one place" />
@@ -16,11 +19,14 @@
 </template>
 
 <script>
+import store from '../store'
+
 import ViewTitle from '../components/topview/ViewTitle.vue'
 import FiltersEditor from '../components/topview/FiltersEditor.vue'
 import VerticalNav from '../components/navbar/VerticalNav.vue'
 import SubmitButton from '../components/generics/SubmitButton.vue'
 import CompanyList from '../components/centerview/CompanyList.vue'
+import SideMenu from '../components/navbar/SideMenu.vue'
 
 import { buttons } from '../assets/js/staticdata.js'
 import { nav_icons } from '../assets/js/staticdata.js'
@@ -34,7 +40,8 @@ export default {
         FiltersEditor,
         ViewTitle,
         SubmitButton,
-        CompanyList
+        CompanyList,
+        SideMenu
     },
     data() { return {
       buttons: buttons,
@@ -46,6 +53,9 @@ export default {
       // [ initial -> filters -> cards ]
       state: {str: 'initial'}
   }},
+  computed: {
+    selected_company () { return store.state.selected_company }
+  }
 }
 </script>
 

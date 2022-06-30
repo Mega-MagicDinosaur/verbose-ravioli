@@ -1,5 +1,5 @@
 <template>
-    <div class="company-card-wrapper" ref="card">
+    <div class="company-card-wrapper" ref="card" @click="clicked">
         <div class="company-card">
             <span>{{this.card.name}}</span>
         </div>
@@ -8,6 +8,8 @@
 
 <script>
 import { mounted_card } from '../../animate.js'
+import store from '../../store/index.js';
+import * as type from '../../store/mutationTypes/types.js';
 
 export default {
     name: 'CompanyCard',
@@ -15,6 +17,12 @@ export default {
         card: Object,
         card_index: Number,
         ring_index: Number,
+    },
+    methods: {
+        clicked() { store.dispatch({
+            type: type.SetSelectedCompany,
+            company: this.card
+        }) }
     },
     mounted() {
         mounted_card(this.$refs.card, this.ring_index, this.card_index)

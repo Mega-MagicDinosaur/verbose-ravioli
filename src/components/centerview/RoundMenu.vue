@@ -2,8 +2,8 @@
   <div class="round-menu-wrapper">
     <div class="round-menu">
       <MenuButton class="menu-button" v-for="item in this.items" :key="item" 
-      :style="{ transform: 'rotate('+ turn +'deg)'}" 
-      @clicked="clicked" :button="item" />
+      :style="{ transform: 'rotate('+ turn +'deg)'}" @clicked="clicked" 
+      :button="item" :selected="(this.first_button == item && this.state.str == 'filters')? true : false"/>
       <CenterButton class="center-button" />
     </div>
     <!-- v-show and v-if are important -->
@@ -50,6 +50,7 @@ export default {
   },
   methods: {
     clicked(button_id) {
+      console.log(this.state)
       if (this.state.str != 'cards') { this.state.str = 'filters' }
       else { return }
       let id = this.get_orientation(button_id)

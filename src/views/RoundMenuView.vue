@@ -4,7 +4,11 @@
 
   <main>
     <div class="view-wrapper">
+      
       <VerticalNav class="vertical-nav" :icons="nav_icons" :primary_button="1"/>
+
+      <!-- hidden nav menu -->
+      <SideMenu :company="this.selected_company" />
 
       <div class="top-view-wrapper">
         <ViewTitle class="view-title" title="Radar View" subtitle="Move freely to find out" />
@@ -22,16 +26,18 @@
         <SubmitButton :text="(this.state.str != 'cards')? 'SEARCH' : 'GO TO LIST' " class="search-button"
         :class="(this.state.str == 'initial')? 'initial-state' : 'changed-state'"/>
 
-        <!-- hidden nav menu -->
       </div>
     </div>
   </main>
 </template>
 
 <script>
+import store from '../store'
+
 import ViewTitle from '../components/topview/ViewTitle.vue'
 import FiltersEditor from '../components/topview/FiltersEditor.vue'
 import VerticalNav from '../components/navbar/VerticalNav.vue'
+import SideMenu from '../components/navbar/SideMenu.vue'
 import RoundMenu from '../components/centerview/RoundMenu.vue'
 import SubmitButton from '../components/generics/SubmitButton.vue'
 
@@ -47,9 +53,11 @@ export default {
     FiltersEditor,
     ViewTitle,
     RoundMenu,
-    SubmitButton
+    SubmitButton,
+    SideMenu,
   },
-  data() { return {
+  data() { 
+    return {
       buttons: buttons,
       filters: filters,
       rings: rings,
@@ -59,6 +67,9 @@ export default {
       // [ initial -> filters -> cards ]
       state: {str: 'initial'}
   }},
+  computed: {
+    selected_company () { return store.state.selected_company }
+  }
 }
 </script>
 

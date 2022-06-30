@@ -2,7 +2,8 @@
 
 .view-wrapper {
     background-color: $background-color;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .top-view-wrapper {

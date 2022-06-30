@@ -1,5 +1,5 @@
 <template>
-  <a class="button" @click.prevent="this.$emit('clicked', this.button.id)">
+  <a class="button" :class="(this.selected)? 'selected' : ''" @click.prevent="this.$emit('clicked', this.button.id)">
     <GoogleIcon class="google-icon" :icon="this.button.icon" />
   </a>
 </template>
@@ -13,7 +13,8 @@ export default {
     GoogleIcon,
   },
   props: {
-    button: Object
+    button: Object,
+    selected: Boolean,
   },
   
 }

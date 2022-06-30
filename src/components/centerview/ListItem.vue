@@ -16,7 +16,7 @@
         
         <td><span class="item-label">{{ this.company.country }}</span> </td> <!-- eventually an image maybe?? -->
 
-        <td><input class="item-scope" type="checkbox" /> </td> <!-- this should be a star!! -->
+        <td><IconButton class="item-scope" type="checkbox" icon="star" /> </td> <!-- this should be a star!! -->
         <td><SubmitButton text="SEE MORE" :active="this.selected"/> </td>
         <td><SubmitButton text="icon"/> </td>
     </div>
@@ -24,11 +24,13 @@
 
 <script>
 import SubmitButton from '../generics/SubmitButton.vue'
+import IconButton from '../generics/IconButton.vue'
 
 export default {
     name: 'ListItem',
     components: {
-        SubmitButton
+        SubmitButton,
+        IconButton
     },
     props: {
         company: Object,

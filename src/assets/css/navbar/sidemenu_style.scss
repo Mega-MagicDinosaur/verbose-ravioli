@@ -1,0 +1,96 @@
+@import '../main_style.scss';
+
+.side-menu {
+    position: fixed;
+
+    z-index: 2; // has to go over topview
+
+    width: calc(250px + 20vw);
+    height: 100vh; // eventually change to a bit less to the top..
+
+    padding: 13px 45px 20px 45px; // eventually use %
+
+    background-color: $secondary-color;
+    box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.25);
+
+    border-radius: 12px 0px 0px 12px;
+
+    transition-duration: .5s;
+    transition-timing-function: linear;
+
+    &.inactive { right: calc(-1* (250px + 20vw)); }
+    &.active { right: 0px; }
+}
+
+.menu-title { 
+    display: flex; 
+    flex-direction: column;
+}
+.top-menu-title, .bottom-menu-title {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+
+    margin-bottom: 20px;
+}
+
+.close-button { 
+    cursor: pointer;
+    margin-left: -30px; 
+} // reposition correctly
+.company-image { 
+    width: 25%;
+    min-width: 60px;
+    height: 50px;
+
+    margin-right: 20px;
+
+    float: left;
+}
+
+.top-buttons, .bottom-buttons {
+    display: inherit;
+    
+    font-size: 10px;
+    font-family: $text-font;
+    text-align: center;
+}
+.top-buttons {
+    width: 75%;
+    height: 50px;
+
+    transform: scale(0.9);
+}
+.bottom-buttons {
+    width: 100%;
+    height: auto;
+}
+.top-button-wrapper, .bottom-button-wrapper {
+    margin-right: 20px;
+    flex-basis: 0;
+    flex: 1 1 0px;
+}
+
+.overview-label, .address-label {
+    
+    background-color: $secondary-color;
+    box-shadow: 0px 4px 19px rgba(78, 140, 252, 0.41);
+
+    border-radius: 10px;
+
+    width: 100%;
+    padding: 10px 15px;
+
+    min-height: 150px;
+
+    margin-bottom: 25px;
+}
+// eventually also add max-height maybe
+
+.label-title {
+    color: #17294AB0;
+
+    font-size: 20px;
+    font-family: $text-font;
+}
