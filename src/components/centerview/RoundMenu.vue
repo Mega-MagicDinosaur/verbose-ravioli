@@ -10,6 +10,9 @@
     <!-- menu cards uses v-if since otherwise animations on mounted() would not. -->
     <MenuFilters v-show="(this.state.str == 'filters')" class="menu-filters" :filters="this.filters"/>
     <MenuCards v-if="(this.state.str == 'cards')" class="menu-cards" :rings="this.rings_data"/>
+    <div class="inner-circle-1"></div>
+    <div class="inner-circle-2"></div>
+    <div class="inner-circle-3"></div>
   </div>
 </template>
 

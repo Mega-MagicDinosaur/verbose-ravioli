@@ -38,6 +38,7 @@ $opening-angle: $pi/2;
 .size-4 { @include menu-cards-item(4) }
 .size-5 { @include menu-cards-item(5) }
 
+
 .card-rings-enter-active,
 .card-rings-leave-active {
   transition: 2s;

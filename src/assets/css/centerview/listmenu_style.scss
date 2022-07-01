@@ -1,6 +1,8 @@
 @import '../main_style.scss';
 
 .table-header {
+    z-index: 2;
+
     display: table-row;
 
     position: sticky;

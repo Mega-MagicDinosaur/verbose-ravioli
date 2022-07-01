@@ -18,28 +18,42 @@
     transition-duration: .5s;
     transition-timing-function: linear;
 
-    &.inactive { right: calc(-1* (250px + 20vw)); }
-    &.active { right: 0px; }
+    &.inactive {
+        right: calc(-1* (250px + 20vw));
+    }
+
+    &.active {
+        right: 0px;
+    }
 }
 
-.menu-title { 
-    display: flex; 
+.side-menu {
+    display: flex;
     flex-direction: column;
 }
-.top-menu-title, .bottom-menu-title {
+
+.menu-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-menu-title,
+.bottom-menu-title {
     display: flex;
     flex-direction: row;
 
     justify-content: center;
 
-    margin-bottom: 20px;
+    margin: -15px 0px 20px 0px;
 }
 
-.close-button { 
+.close-button {
     cursor: pointer;
-    margin-left: -30px; 
-} // reposition correctly
-.company-image { 
+    margin-left: -30px;
+}
+
+// reposition correctly
+.company-image {
     width: 25%;
     min-width: 60px;
     height: 50px;
@@ -49,31 +63,59 @@
     float: left;
 }
 
-.top-buttons, .bottom-buttons {
+.top-buttons,
+.bottom-buttons {
     display: inherit;
-    
+
     font-size: 10px;
     font-family: $text-font;
     text-align: center;
 }
+
 .top-buttons {
     width: 75%;
     height: 50px;
 
     transform: scale(0.9);
 }
+
 .bottom-buttons {
     width: 100%;
     height: auto;
 }
-.top-button-wrapper, .bottom-button-wrapper {
+
+.top-button-wrapper,
+.bottom-button-wrapper {
     margin-right: 20px;
     flex-basis: 0;
     flex: 1 1 0px;
 }
 
-.overview-label, .address-label {
-    
+.overview-label,
+.address-label {
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 5px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #aaa;
+        border-radius: 5px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #888;
+    }
+
     background-color: $secondary-color;
     box-shadow: 0px 4px 19px rgba(78, 140, 252, 0.41);
 
@@ -82,15 +124,43 @@
     width: 100%;
     padding: 10px 15px;
 
-    min-height: 150px;
-
     margin-bottom: 25px;
 }
-// eventually also add max-height maybe
+
+.overview-label {
+    height: 33vh;
+}
+
+.info-container {
+    display: flex;
+}
+
+.info-left,
+.info-right {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.address-label {
+    height: 28vh;
+}
 
 .label-title {
     color: #17294AB0;
 
     font-size: 20px;
+    font-family: $text-font;
+}
+
+.info-title {
+    color: #C4C4DA;
+    font-size: 10px;
+
+    white-space: nowrap;
+}
+
+.info {
+    font-size: 13px;
     font-family: $text-font;
 }

@@ -1,3 +1,5 @@
+@use "sass:map";
+
 @import '../main_style.scss';
 
 .round-menu-wrapper {
@@ -46,6 +48,7 @@
 
   box-shadow: inset 0 4px 12px 0 #454545, inset 0 0 0 1.8vh #E2E2E2, 0 0 0 0.8vh $tertiary-color;
 }
+
 .menu-button {
   transform: rotate(45deg);
   box-sizing: border-box;
@@ -57,21 +60,55 @@
   left: 50%;
   transform-origin: bottom left;
 }
+
 .menu-button:nth-child(2) {
   border-radius: 0 0 40vh 0;
   top: 50%;
   left: 50%;
   transform-origin: top left;
 }
+
 .menu-button:nth-child(3) {
   border-radius: 0 0 0 40vh;
   top: 50%;
   left: 0%;
   transform-origin: top right;
 }
+
 .menu-button:nth-child(4) {
   border-radius: 40vh 0 0 0;
   top: 0%;
   left: 0%;
   transform-origin: bottom right;
 }
+
+@mixin circle($ring-number) {
+  z-index: -1;
+
+  transform-origin: center;
+  position: absolute;
+  display: inline-block;
+
+  $ring-open-distance: map.get($ring-radius, (ring-radius#{$ring-number}));
+  width:  calc($ring-open-distance * 2.1);
+  height: calc($ring-open-distance * 2.1);
+
+  margin: auto;
+
+  border-radius: 50%;
+  border: 2px solid $secondary-color;
+
+  background-color: rgba(0, 0, 0, 0);
+
+  bottom: 0px;
+  top: 40px; // offset for card height
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  pointer-events: none;
+
+}
+
+.inner-circle-1 { @include circle(1) }
+.inner-circle-2 { @include circle(2) }
+.inner-circle-3 { @include circle(3) }

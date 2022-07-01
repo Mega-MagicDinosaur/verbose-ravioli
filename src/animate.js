@@ -9,5 +9,4 @@ export function mounted_ring(element, index) {
     }).play()
 }
 
-export function mounted_card(element, ring_index, card_index) {
-}
+export function mounted_card(element, ring_index, card_index) {}

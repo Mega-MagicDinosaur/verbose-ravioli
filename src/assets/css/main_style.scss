@@ -39,7 +39,6 @@ $cards-offset: 0px;
 
 // attention! if radius ($cards-open-distance) is allowed to be less than centerview-height,
 // program crashes since asin (arcsin) of more than 1 is NaN.
-// seems like minimum is 42.5 vh...
 
 $ring-radius: (
     ring-radius1: 50vmin,
