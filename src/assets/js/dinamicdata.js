@@ -43,47 +43,47 @@ const companies = [
     new Company('name1', 'country1', 'https://web1',
         'sector1', ['sector_1o', 'sector_2o'], ['product_1', 'product_2'],
         100, 10, 1950,
-        'some_text_here! 1', 'https://img', 50),
+        'some_text_here! 1', 'https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2021/08/Screenshot-2021-08-06-at-1.00.49-PM-960x363.jpg', 50),
 
     new Company('name2', 'country2', 'https://web2',
         'sector2', ['sector_1o', 'sector_2o'], ['product_1', 'product_2'],
         100, 10, 1950,
-        'some_text_here! 2', 'https://img', 25),
+        'some_text_here! 2', 'https://www.djangoproject.com/m/img/logos/django-logo-negative.svg', 25),
 
     new Company('name3', 'country3', 'https://web3',
         'sector3', ['sector_1o', 'sector_2o'], ['product_1', 'product_2'],
         100, 10, 1950,
-        'some_text_here! 3', 'https://img', 75),
+        'some_text_here! 3', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/2560px-MongoDB_Logo.svg.png', 75),
 
     new Company('name4', 'country4', 'https://web4',
         'sector4', ['sector_1o', 'sector_2o'], ['product_1', 'product_2'],
         100, 10, 1950,
-        'some_text_here! 4', 'https://img', 12),
+        'some_text_here! 4', 'https://www.begear.it/wp-content/uploads/2015/11/java-logo.jpg', 12),
 
     new Company('name5', 'country5', 'https://web5',
         'sector5', ['sector_1o', 'sector_2o'], ['product_1', 'product_2'],
         100, 10, 1950,
-        'some_text_here! 5', 'https://img', 15),
+        'some_text_here! 5', 'https://www.geekandjob.com/uploads/wiki/50394d09226db485fac65bfa45529b52617b054b.png', 15),
 
     new Company('name6', 'country6', 'https://web6',
         'sector6', ['sector_1o', 'sector_2o'], ['product_1', 'product_2'],
         100, 10, 1950,
-        'some_text_here! 6', 'https://img', 14),
+        'some_text_here! 6', 'https://upload.wikimedia.org/wikipedia/commons/7/73/Javascript-736400_960_720.png', 14),
 
     new Company('name7', 'country7', 'https://web7',
         'sector7', ['sector_1o', 'sector_2o'], ['product_1', 'product_2'],
         100, 10, 1950,
-        'some_text_here! 7', 'https://img', 18),
+        'some_text_here! 7', 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ruby_logo.svg/1200px-Ruby_logo.svg.png', 18),
 
     new Company('name9', 'country8', 'https://web8',
         'sector8', ['sector_1o', 'sector_2o'], ['product_1', 'product_2'],
         100, 10, 1950,
-        'some_text_here! 8', 'https://img', 1),
+        'some_text_here! 8', 'https://blog.wildix.com/wp-content/uploads/2020/06/react-logo.jpg', 1),
 
     new Company('name10', 'country9', 'https://web9',
         'sector9', ['sector_1o', 'sector_2o'], ['product_1', 'product_2'],
         100, 10, 1950,
-        'some_text_here! 9', 'https://img', 99)
+        'some_text_here! 9', 'https://1.bp.blogspot.com/-YIfQT6q8ZM4/Vzyq5z1B8HI/AAAAAAAAAAc/UmWSSMLKtKgtH7CACElUp12zXkrPK5UoACLcB/s1600/image00.png', 99)
 ]
 
 /* - GRAPH STRUCTURE - */
@@ -93,29 +93,16 @@ const rings = [
         companies[0],
         companies[1],
         companies[2],
-        companies[3],
-        companies[4],
-        companies[5],
-        companies[6],
-        companies[7],
-        companies[8], 
     ], [
         companies[3],
         companies[4],
         companies[5],
-        companies[2],
-        companies[6],
     ], [
         companies[6],
         companies[7],
-        companies[8], 
-        companies[2],
-        companies[2],
-        companies[7],
-        companies[8], 
-        companies[2],
-        companies[2],
-    ] ]
+        companies[8],
+    ] 
+]
 
 /* - FILTERS - */
 

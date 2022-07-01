@@ -1,7 +1,7 @@
 <template>
     <div class="company-list-wrapper">
         <div class="table">
-            <ListMenu class="list-menu" :selected="this.selected_menu_item" :companies="companies"
+            <ListMenu class="list-menu" :selected="this.selected_menu_item" :companies="this.companies"
             @clicked_menu="clicked_menu"/>
             <ListItem class="list-item" :selected="(selected_list_item == index)? true : false" 
             v-for="(company, index) in this.companies" :key="company" 
@@ -23,7 +23,8 @@ export default {
     props: {
         companies: Array
     },
-    data() { return {
+    data() { 
+        return {
         selected_menu_item: 0,
         selected_list_item: 0,
     }},

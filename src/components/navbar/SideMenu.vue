@@ -2,11 +2,11 @@
   <div class="side-menu-wrapper">
     <div class="side-menu" :class="this.active ? 'active' : 'inactive'">
       <!-- TITLE -->
-      <div class="menu-title">
+      <div v-if="this.company != null || this.company != undefined" class="menu-title">
         <GoogleIcon icon="close" class="close-button" @click="clicked" /> <br />
 
         <div class="top-menu-title">
-          <img src="#" class="company-image" />
+          <img :src="this.company.img" class="company-image" />
           <div class="top-buttons">
             <div class="top-button-wrapper" v-for="icon in this.icons[0]" :key="icon" >
               <IconButton class="icon" :icon="icon.icon" />

@@ -12,7 +12,7 @@
                 <FiltersEditor class="filters-editor" :filters="this.filters" :buttons="this.buttons" :state="this.state" />
             </div> 
             <div class="center-view-wrapper">
-                <CompanyList :companies="this.rings[0]"/>
+                <CompanyList :companies="this.company_list"/>
             </div>
         </div>
     </main>
@@ -43,19 +43,23 @@ export default {
         CompanyList,
         SideMenu
     },
-    data() { return {
+    data() { 
+        let list = []
+        rings.forEach((ring) => { list = list.concat(ring) })
+    return {
       buttons: buttons,
       filters: filters,
       rings: rings,
       nav_icons: nav_icons,
+      company_list: list,
       
       // states
       // [ initial -> filters -> cards ]
       state: {str: 'initial'}
   }},
   computed: {
-    selected_company () { return store.state.selected_company }
-  }
+    selected_company () { return store.state.selected_company },
+  },
 }
 </script>
 
@@ -64,5 +68,24 @@ export default {
 
 .center-view-wrapper {
     overflow-y: scroll;
+
+    &::-webkit-scrollbar { width: 8px; }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 5px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #aaa;
+        border-radius: 5px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #888;
+    }
 }
 </style>

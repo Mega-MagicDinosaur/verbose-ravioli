@@ -1,7 +1,7 @@
 <template>
     <div class="company-card-wrapper" ref="card" @click="clicked">
         <div class="company-card">
-            <span>{{this.card.name}}</span>
+            <img class="image" :src="this.card.img" :alt="this.card.name"/>
         </div>
     </div>
 </template>

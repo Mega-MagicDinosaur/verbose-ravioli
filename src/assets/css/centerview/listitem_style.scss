@@ -38,3 +38,10 @@ th:last-child {
    // color: yellow !important; not working
    text-align: center; // just filler
 }
+
+.item-image {
+  width: 60px;
+  height: 40px;
+
+  border-radius: 5px;
+}
