@@ -43,6 +43,15 @@ $pi: 3.1415;
         calc( sin($angle)*$ring-open-distance ), 0 ) scale(1);
     }
   }
+
+  @if $item-number == 1 { // this is for special case only 1 item in ring
+    &:nth-child(1) {
+      transition-duration: 500ms;
+      transform: translate3d(
+        calc( 1*$ring-open-distance ), 
+        calc( 0*$ring-open-distance ), 0 ) scale(1);
+    }
+  }
 }
 @mixin card-ring-index($index-number) {}
 

@@ -91,12 +91,9 @@ const companies = [
 const rings = [ 
     [
         companies[0],
-        companies[1],
-        companies[2],
     ], [
         companies[3],
         companies[4],
-        companies[5],
     ], [
         companies[6],
         companies[7],
