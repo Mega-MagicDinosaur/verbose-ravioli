@@ -50,10 +50,6 @@ class Address {
 
 /* - COMPANIES - */
 
-const company_data = {
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/The_Boring_Company_Logo.svg/800px-The_Boring_Company_Logo.svg.png'
-}
-
 const companies = [
     new Company('Laravel', 'country1', 'https://web1',
         'backend', ['sector_1o', 'sector_2o'], ['product_1', 'product_2'],
@@ -112,6 +108,12 @@ const companies = [
         'some_text_here! 9', 'https://1.bp.blogspot.com/-YIfQT6q8ZM4/Vzyq5z1B8HI/AAAAAAAAAAc/UmWSSMLKtKgtH7CACElUp12zXkrPK5UoACLcB/s1600/image00.png', 99, 
         [new Address('country1', 'region1', 'city1', 'address1', 'postal_code1'), new Address('country2', 'region2', 'city2', 'address2', 'postal_code2')]),
 ]
+
+// COMPANY DATA
+const company_data = {
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/The_Boring_Company_Logo.svg/800px-The_Boring_Company_Logo.svg.png',
+    scoped_companies: []
+}
 
 /* - GRAPH STRUCTURE - */
 

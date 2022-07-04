@@ -17,8 +17,11 @@
         
         <td><span class="item-label">{{ this.company.country }}</span> </td> <!-- eventually an image maybe?? -->
 
-        <td><IconButton class="item-scope" type="checkbox" icon="star" /> </td> <!-- this should be a star!! -->
-        <td><SubmitButton @click="clicked" text="SEE MORE" :active="this.selected"/> </td>
+        <td><IconButton class="item-scope" type="checkbox" icon="star" 
+        :color="scoped? 'gold' : 'def'"
+        @click="scoped? this.remove_scoped() : this.add_scoped()"/> </td>
+        <td><SubmitButton 
+        @click="clicked" text="SEE MORE" :active="this.selected"/> </td>
         <td><SubmitButton text="icon"/> </td>
     </div>
 </template>
@@ -29,6 +32,8 @@ import IconButton from '../generics/IconButton.vue'
 
 import store from '../../store/index.js';
 import * as type from '../../store/mutationTypes/types.js';
+
+import { company_data } from '@/assets/js/dinamicdata';
 
 export default {
     name: 'ListItem',
@@ -44,11 +49,24 @@ export default {
         },
         selected: Boolean
     },
+    data() { return {
+        company_data: company_data
+    }},
+    computed: {
+        scoped() { return this.company_data.scoped_companies.includes(this.company) }
+    },
     methods: {
         clicked() { store.dispatch({
             type: type.SetSelectedCompany,
             company: this.company
-        }) }
+        }) },
+        remove_scoped() {
+            var index = this.company_data.scoped_companies.indexOf(this.company);
+            if (index !== -1) { this.company_data.scoped_companies.splice(index, 1); }
+        },
+        add_scoped() {
+            this.company_data.scoped_companies.push(this.company)
+        }
     }
 }
 </script>

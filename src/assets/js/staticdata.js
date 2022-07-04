@@ -49,12 +49,6 @@ const menu_settings = [
 ]
 
 const side_menu_icons = [
-    [ // title icons
-        { icon: 'star', label: 'On Scope' },
-        { icon: 'label', label: 'Label' },
-        { icon: 'list', label: 'Add to List' },
-        { icon: 'compare', label: 'Compare' },
-    ],
     [ // score icons
         { icon: 'network_check', label: 'TOTAL Score' },
         { icon: 'lan', label: 'BOM Score' },

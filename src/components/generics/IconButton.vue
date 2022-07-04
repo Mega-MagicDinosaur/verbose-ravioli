@@ -1,7 +1,8 @@
 <template>
     <div class="icon-button-wrapper">
-        <button class="btn btn-primary icon-button">
-            <GoogleIcon class="google-icon" :icon="this.icon"/>
+        <button class="btn btn-primary icon-button" 
+        :style="(this.color != 'def')? {'color':this.color} : {'color':'#435176'}">
+            <GoogleIcon class="google-icon" :icon="this.icon" />
         </button>
     </div>
 </template>
@@ -16,6 +17,10 @@ export default {
     },
     props: {
         icon: String,
+        color: {
+            tyle: String,
+            default: 'def'
+        }
     },
 }
 </script>
