@@ -22,7 +22,7 @@
         @click="scoped? this.remove_scoped() : this.add_scoped()"/> </td>
         <td><SubmitButton 
         @click="clicked" text="SEE MORE" :active="this.selected"/> </td>
-        <td><SubmitButton text="icon"/> </td>
+        <td><IconButton icon="label" style="transform: rotate(180deg)"/> </td>
     </div>
 </template>
 
