@@ -2,10 +2,10 @@
 
 <div class="menu-filters-wrapper">
   <TransitionGroup name="list">
-      <a v-for="(filter, index) in this.filters" :key="filter" :class="'size-'+this.filters.length">
+      <span v-for="(filter, index) in this.filters" :key="filter" :class="'size-'+this.filters.length">
         <FilterMenu class="filter-menu" :filter="filter" :selected="this.menus[index]" 
         @clicked_menu="clicked_menu(filter)" />
-      </a>
+      </span>
   </TransitionGroup>
 </div>
 

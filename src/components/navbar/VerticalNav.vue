@@ -7,9 +7,9 @@
         :primary_button="(index == primary_button-1)?'true' : 'false'" 
         :class="(index == primary_button-1)? 'primary-button' : ''"/>
 
-        <a type="button" class="btn nav-button settings-button">
+        <span type="button" class="btn nav-button settings-button">
             <GoogleIcon class="settings-icon" icon="manage_accounts" />
-        </a> <!-- options button -->
+        </span> <!-- options button -->
     </div>
 </template>
 

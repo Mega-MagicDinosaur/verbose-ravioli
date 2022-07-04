@@ -1,7 +1,7 @@
 <template>
-  <a class="button" :class="(this.selected)? 'selected' : ''" @click.prevent="this.$emit('clicked', this.button.id)">
+  <span class="button" :class="(this.selected)? 'selected' : ''" @click.prevent="this.$emit('clicked', this.button.id)">
     <GoogleIcon class="google-icon" :icon="this.button.icon" />
-  </a>
+  </span>
 </template>
 
 <script>
