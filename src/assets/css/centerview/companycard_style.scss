@@ -11,10 +11,12 @@
 }
 
 .image {
+    cursor: pointer;
+
     width: 80px;
     height: 50px;
 
     object-fit: contain;
-    
+
     border-radius: 5px;
 }

@@ -11,7 +11,7 @@
         <IconButton class="domain-button" icon="domain"/>
         <div class="found-companies-label"> <!-- Radically change -->
             <span>Found</span> <br>
-            <span style="font-size: 18px;">{{found_companies}}</span>
+            <span class="found-companies" >{{found_companies}}</span>
         </div>
     </div>
 </template>
