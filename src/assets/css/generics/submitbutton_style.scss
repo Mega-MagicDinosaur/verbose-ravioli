@@ -9,16 +9,16 @@
     white-space: nowrap; // display text in one line
 }
 
-.active {
-    background-color: $primary-color;
-    color: $secondary-color;
+.active { // important since it overrides bootstrap theme
+    background-color: $primary-color !important;
+    color: $secondary-color !important;
     
-    border: 1px solid $primary-color;
+    border: 1px solid $primary-color !important;
 }
 
 .inactive {
-    background-color: $secondary-color;
-    color: $primary-color;
+    background-color: $secondary-color !important;
+    color: $primary-color !important;
 
-    border: 1px solid $primary-color;
+    border: 1px solid $primary-color !important;
 }

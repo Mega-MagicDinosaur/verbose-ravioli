@@ -50,6 +50,10 @@ class Address {
 
 /* - COMPANIES - */
 
+const company_data = {
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/The_Boring_Company_Logo.svg/800px-The_Boring_Company_Logo.svg.png'
+}
+
 const companies = [
     new Company('Laravel', 'country1', 'https://web1',
         'backend', ['sector_1o', 'sector_2o'], ['product_1', 'product_2'],
@@ -171,3 +175,5 @@ export { Company }
 export { filters }
 export { companies }
 export { rings }
+
+export { company_data }

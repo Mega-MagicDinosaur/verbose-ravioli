@@ -53,7 +53,6 @@ export default {
   },
   methods: {
     clicked(button_id) {
-      console.log(this.state)
       if (this.state.str != 'cards') { this.state.str = 'filters' }
       else { return }
       let id = this.get_orientation(button_id)

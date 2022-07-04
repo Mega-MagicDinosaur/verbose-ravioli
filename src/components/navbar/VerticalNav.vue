@@ -1,6 +1,6 @@
 <template>
     <div class="vertical-nav-wrapper">
-        <img src="image-path" class="navbar-logo">
+        <img src="@/assets/img/krein_logo.png" class="navbar-logo">
 
         <NavButton class="nav-button" v-for="(icon, index) in this.icons" :key="icon" 
         :icon="this.icons[index]" 
