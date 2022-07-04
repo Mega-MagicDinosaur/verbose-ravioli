@@ -1,6 +1,6 @@
 <template>
     <div class="table-row">
-        <td><input class="item-checkbox" type="checkbox" /> </td>
+        <td><input class="item-checkbox" type="checkbox" name="box"/><label for="box"></label> </td>
         <td><img class="item-image" :src="this.company.img" :alt="this.company.name" /> </td>
          <!-- maybe use this.score?? decide eventually -->
         <td><span class="item-label item-score">{{ this.company.score }}</span> </td>
