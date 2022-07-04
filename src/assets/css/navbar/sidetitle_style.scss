@@ -1,0 +1,64 @@
+@import '../main_style.scss';
+
+.menu-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-menu-title,
+.bottom-menu-title {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+
+    margin: -15px 0px 20px 0px;
+}
+
+.top-menu-title {
+    margin-bottom: 30px;
+}
+
+.close-button {
+    cursor: pointer;
+    margin-left: -30px;
+}
+
+// reposition correctly
+.company-image {
+    width: 25%;
+    min-width: 60px;
+    height: 50px;
+
+    margin-right: 20px;
+
+    float: left;
+}
+
+.top-buttons,
+.bottom-buttons {
+    display: inherit;
+
+    font-size: 10px;
+    font-family: $text-font;
+    text-align: center;
+}
+
+.top-buttons {
+    width: 75%;
+    height: 50px;
+
+    transform: scale(0.9);
+}
+
+.bottom-buttons {
+    width: 100%;
+    height: auto;
+}
+
+.top-button-wrapper,
+.bottom-button-wrapper {
+    margin-right: 20px;
+    flex-basis: 0;
+    flex: 1 1 0px;
+}
