@@ -1,7 +1,7 @@
 <template>
     <div class="icon-button-wrapper">
         <button class="btn btn-primary icon-button" 
-        :style="(this.color != 'def')? {'color':this.color} : {'color':'#435176'}">
+        :style="(this.color != 'def')? {'color':this.color} : {'color':''}">
             <GoogleIcon class="google-icon" :icon="this.icon" />
         </button>
     </div>

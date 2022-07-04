@@ -78,12 +78,12 @@ export default {
       });
     },
     remove_scoped() {
-            var index = this.company_data.scoped_companies.indexOf(this.company);
-            if (index !== -1) { this.company_data.scoped_companies.splice(index, 1); }
-        },
-        add_scoped() {
-            this.company_data.scoped_companies.push(this.company)
-        }
+      var index = this.company_data.scoped_companies.indexOf(this.company);
+        if (index !== -1) { this.company_data.scoped_companies.splice(index, 1); }
+      },
+      add_scoped() {
+        this.company_data.scoped_companies.push(this.company)
+      }
   },
 };
 </script>
