@@ -28,7 +28,7 @@ const nav_icons = [
 // SORT SETTINGS
 const order_by_score = companies => companies.sort((a,b) => b.score-a.score)
 const order_by_name = companies => companies.sort((a,b) => ('' + a.name).localeCompare(b.name))
-const order_by_turnover = companies => companies.sort((a,b) => a.turnover-b.turnover)
+const order_by_turnover = companies => companies.sort((a,b) => b.turnover-a.turnover)
 const order_by_employees = companies => companies.sort((a,b) => b.employees-a.employees) // eventually change to a[1]
 const order_by_products = companies => companies.sort((a,b) => b.products.length-a.products.length)
 

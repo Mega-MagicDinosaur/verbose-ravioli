@@ -1,0 +1,71 @@
+@import '../main_style.scss';
+
+.label-title {
+    color: #17294AB0;
+
+    font-size: 20px;
+    font-family: $text-font;
+}
+
+
+.address-containers {
+    display: flex;
+    flex-direction: row;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+
+    padding: 8px;
+    margin: 8px;
+
+    border: 2px solid #4DCB20;
+    border-radius: 9px;
+}
+
+.address-title {
+    font-family: $text-font;
+    color: $text-color;
+    font-size: 16px;
+}
+
+.address-label {
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    &::-webkit-scrollbar { width: 8px; height: 8px;}
+    &::-webkit-scrollbar-thumb:hover { background: #888; }
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #aaa;
+        border-radius: 5px;
+    }
+
+    background-color: $secondary-color;
+    box-shadow: 0px 4px 19px rgba(78, 140, 252, 0.41);
+
+    border-radius: 10px;
+
+    width: 100%;
+    height: auto;
+    padding: 10px 15px;
+
+    margin-bottom: 25px;
+}
+
+.address-line {
+    display: flex;
+
+    font-family: $text-font;
+    color: $text-color;
+    font-size: 10px;
+
+    & .address-attribute { 
+        white-space: nowrap;
+        color: #C4C4DA; 
+    }
+}

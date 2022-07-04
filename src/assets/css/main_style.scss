@@ -37,13 +37,12 @@ $radar-menu-scale: 0.8;
 
 $cards-offset: 0px;
 
-// attention! if radius ($cards-open-distance) is allowed to be less than centerview-height,
-// program crashes since asin (arcsin) of more than 1 is NaN.
-
+// warning: if radius ($cards-open-distance) is allowed to be less than centerview-height,
+// sass does not compile since asin (arcsin) of more than 1 is NaN.
 $ring-radius: (
-    ring-radius1: 50vmin,
-    ring-radius2: 100vmin,
-    ring-radius3: 150vmin,
+    ring-radius1: 55vmin,
+    ring-radius2: 105vmin,
+    ring-radius3: 155vmin,
 );
 
 $cards-menu-open-distance: 0px;
