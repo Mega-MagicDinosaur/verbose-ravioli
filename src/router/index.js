@@ -3,6 +3,11 @@ import HomeView from '../views/RoundMenuView.vue'
 
 const routes = [
   {
+    path: '/',
+    name: 'home',
+    redirect: '/round-menu'
+  },
+  {
     path: '/round-menu',
     name: 'round-menu',
     component: () => import('../views/RoundMenuView.vue')

@@ -11,7 +11,7 @@
         <IconButton class="domain-button" icon="domain"/>
         <div class="found-companies-label"> <!-- Radically change -->
             <span>Found</span> <br>
-            <b><span>loading...</span></b>
+            <span style="font-size: 18px;">{{found_companies}}</span>
         </div>
     </div>
 </template>
@@ -21,6 +21,8 @@ import GoogleIcon from '../generics/GoogleIcon.vue'
 import IconButton from '../generics/IconButton.vue'
 import FiltersBox from './FiltersBox.vue'
 import SubmitButton from '../generics/SubmitButton.vue'
+
+import { rings } from '@/assets/js/dinamicdata' 
 
 export default {
     name: 'SearchBox',
@@ -34,9 +36,20 @@ export default {
         button_filters: Array,
         state: Object,
     },
+    data() { return {
+        rings: rings
+    }},
     computed: {
         active_filters() {
             return this.button_filters.filter(filter => filter.getBoxesChecked() > 0)
+        },
+        companies() {
+            let companies = []
+            this.rings.forEach( (ring) => { companies = companies.concat(ring)} )
+            return companies
+        },
+        found_companies() {
+            return this.companies.length.toString()
         }
     }
 }
