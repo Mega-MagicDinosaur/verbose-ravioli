@@ -2,6 +2,7 @@
 
 .vertical-nav-wrapper {
     display: flex;
+
     flex-direction: column;
     align-items: center;
 
@@ -37,6 +38,26 @@
     background-color: $background-color;
 
     border-radius: 50px 0px 0px 50px; // for now just a high px value does the trick
+
+    &:before, &:after {
+        z-index: 1;
+        content: "";
+        width: 20px;
+        height: 20px;
+        left: 0;
+        position: absolute;
+        background-color: $secondary-color;
+    }
+
+    &:before {
+        transform: translateX($navbar-width - 20px) translateY(-30px);
+        border-radius: 0px 0px 20px 0px;
+    }
+
+    &:after {
+        transform: translateX($navbar-width - 20px) translateY(10px);
+        border-radius: 0px 20px 0px 0px;
+    }
 }
 
 .settings-button {

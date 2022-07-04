@@ -29,3 +29,12 @@
     color: $primary-color;
 }
 
+.horizontal-bar {
+    position: absolute;
+    width: 83px;
+    height: 20px;
+    left: 0px;
+    background-color: $background-color;
+    transform: rotate(90deg) translateX(-22px) translateY(-24px);
+    z-index: 0;
+}
