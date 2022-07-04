@@ -6,7 +6,7 @@
     <GoogleIcon icon="close" class="close-button" @click="clicked" /> <br />
 
     <div class="top-menu-title">
-      <img :src="this.company.img" class="company-image" />
+      <img :src="this.company.img" :alt="this.company.name" class="company-image" />
       <div class="top-buttons">
         <div class="top-button-wrapper" >
           <IconButton class="icon" icon="star" :color="scoped? 'gold' : 'def'"

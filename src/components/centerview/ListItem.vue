@@ -1,7 +1,7 @@
 <template>
     <div class="table-row">
         <td><input class="item-checkbox" type="checkbox" /> </td>
-        <td><img class="item-image" :src="this.company.img" /> </td>
+        <td><img class="item-image" :src="this.company.img" :alt="this.company.name" /> </td>
          <!-- maybe use this.score?? decide eventually -->
         <td><span class="item-label item-score">{{ this.company.score }}</span> </td>
         <td><span class="item-label item-name">{{ this.company.name }}</span> </td>

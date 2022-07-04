@@ -1,5 +1,5 @@
 <template>
-    <a class="center-button"><img class="image" :src="this.company_data.image"></a>
+    <a class="center-button"><img class="image" alt="company prophile image" :src="this.company_data.image"></a>
 </template>
 
 <script>
