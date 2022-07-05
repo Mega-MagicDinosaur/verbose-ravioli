@@ -2,6 +2,9 @@
 
 .view-title-wrapper {
     float: left;
+    
+    position: relative;
+    z-index: 1;
 
     margin: 0vh 1.5vw; // revise later, might give problems with responsive design
     padding: 2vh 0vw;

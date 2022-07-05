@@ -1,6 +1,8 @@
 @import '../main_style.scss';
 
 .company-card-wrapper {
+    z-index: 1;
+
     width: 80px;
     height: 50px;
 

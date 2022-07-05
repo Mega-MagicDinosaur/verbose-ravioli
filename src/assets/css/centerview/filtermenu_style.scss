@@ -43,6 +43,7 @@
     }
 }
 .filter-menu-wrapper {
+    z-index: 2; // avoid round menu button icons on top of this icon
     padding: 0 15px;
 
     &:hover .menu-title {

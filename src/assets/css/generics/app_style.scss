@@ -4,6 +4,8 @@
     background-color: $background-color;
     overflow-x: hidden;
     overflow-y: hidden;
+
+    
 }
 
 .top-view-wrapper {
@@ -12,14 +14,16 @@
 }
 
 .center-view-wrapper {
-    position: absolute;
+    position: fixed; // NEEDED
 
     width: calc(100% - $navbar-width);
     height: calc(100% - $topview-height);
 
+    transform: translateX(0px);
+
     left: $navbar-width;
 
-    overflow: hidden;
+    overflow-y: visible;
 }
 
 .nordlys-button {

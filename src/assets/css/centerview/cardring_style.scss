@@ -19,7 +19,7 @@ $pi: 3.1415;
 }
 
 @mixin card-ring-item($item-number, $ring-number) {
-  z-index: 1;
+  z-index: 5;
   display: inline-block;
   position: absolute;
   white-space: nowrap;
@@ -30,7 +30,7 @@ $pi: 3.1415;
   @for $i from 1 through $item-number {
     $opening-angle: calc( 
       asin( 
-        ( (40vmax)/2 ) /
+        ( (40vmax - 4vmax)/2 ) /
           $ring-open-distance
         ) * 2
     );

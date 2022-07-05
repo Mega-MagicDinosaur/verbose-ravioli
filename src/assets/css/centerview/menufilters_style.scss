@@ -2,8 +2,9 @@
 @import "node_modules/mathsass/dist/math";
 
 $pi: 3.1415;
-$open-distance: 180px;
+$open-distance: calc(30vmin);
 $opening-angle: $pi/2;
+
 
 .menu-icon { font-size: 22px; }
 

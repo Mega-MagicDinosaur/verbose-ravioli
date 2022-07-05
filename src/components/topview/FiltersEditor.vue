@@ -1,8 +1,9 @@
 <template>
-    <div class="filters-editor-wrapper">
+    <div class="filters-editor-wrapper" :class="(this.state.str != 'initial')? 'active' : 'unactive'">
         <ButtonsBox class="buttons-box" :buttons="this.buttons"
         @button_selected="select_button"/>
-        <SearchBox class="search-box" :button_filters="this.filters[this.selected]" :state="this.state"/>
+        <SearchBox class="search-box"
+        :button_filters="this.filters[this.selected]" :state="this.state"/>
     </div>
 </template>
 

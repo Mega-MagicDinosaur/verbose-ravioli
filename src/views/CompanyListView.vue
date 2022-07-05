@@ -54,8 +54,9 @@ export default {
       company_list: list,
       
       // states
+      // here it starts from filters, so filters can still be changed when changing view
       // [ initial -> filters -> cards ]
-      state: {str: 'initial'}
+      state: {str: 'filters'}
   }},
   computed: {
     selected_company () { return store.state.selected_company },
