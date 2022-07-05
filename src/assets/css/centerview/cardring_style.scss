@@ -26,14 +26,11 @@ $pi: 3.1415;
   transition: transform ease-out 200ms;
 
   $ring-open-distance: map.get($ring-radius, (ring-radius#{$ring-number}) );
+  $ring-radio-ratio: map.get($ring-angle, (ring-angle#{$ring-number}) );
+  // $ring-radio-ratio: $ring-open-distance / map.get($ring-radius, (ring-radius1) );
 
-  @for $i from 1 through $item-number { // -2vmax is offset
-    $opening-angle: calc( 
-      asin( 
-        ( (40vmax - 2vmax)/2 ) /
-          $ring-open-distance
-        ) * 2
-    );
+  @for $i from 1 through $item-number {
+    $opening-angle: calc( asin( 1 / $ring-radio-ratio ) );
 
     $angle: ((0 - $opening-angle)/2)+(($opening-angle/($item-number - 1))*($i - 1));
     &:nth-child(#{$i}) {

@@ -8,6 +8,7 @@
 
 .top-view-wrapper {
     padding-top: 2vh;
+    height: $topview-height;
 }
 
 .center-view-wrapper {
@@ -36,7 +37,7 @@
 
     &.changed-state {
         position: absolute;
-        padding: 5vmin;
+        padding: 1vmax;
         transform: translate(0%,-100%);
 
         top:  calc(100vh - $topview-height);
@@ -47,7 +48,7 @@
 .search-button {
     position: absolute;
     
-    padding: 5vmin;
+    padding: 1vmax;
     
     bottom:0;
     right:0;

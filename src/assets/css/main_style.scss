@@ -22,7 +22,7 @@ $text-font: 'Montserrat', sans-serif;
 
 $navbar-width: 75px;
 
-$topview-height: 150px;
+$topview-height: 22vh;
 
 $icon-offset: 8px;
 
@@ -43,6 +43,12 @@ $ring-radius: (
     ring-radius1: 25vmax,
     ring-radius2: 50vmax,
     ring-radius3: 75vmax,
+);
+
+$ring-angle: (
+    ring-angle1: 1,
+    ring-angle2: 1.5,
+    ring-angle3: 2,
 );
 
 $cards-menu-open-distance: 0px;
