@@ -22,7 +22,7 @@ $text-font: 'Montserrat', sans-serif;
 
 $navbar-width: 75px;
 
-$topview-height: 22vh;
+$topview-height: calc(22vh + 1.5vh); // offset
 
 $icon-offset: 8px;
 

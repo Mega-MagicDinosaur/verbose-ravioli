@@ -20,9 +20,9 @@
 }
 
 .nav-button-link {
-    &:hover { // for some reason display flex adds text-deco, so this is required
-        text-decoration: none;
-    }
+    text-decoration: none;
+
+    
 }
 
 .primary-button {
