@@ -1,12 +1,16 @@
 <template>
     <div class="company-list-wrapper">
-        <div class="table">
-            <ListMenu class="list-menu" :selected="this.selected_menu_item" :companies="this.companies"
-            @clicked_menu="clicked_menu"/>
-            <ListItem class="list-item" :selected="(selected_list_item == index)? true : false" 
-            v-for="(company, index) in this.companies" :key="company" 
-            :company="company" :score="index" @click="clicked_item(index)"/>
-        </div>
+        <table class="table table-sm">
+            <thead>
+                <ListMenu class="list-menu" :selected="this.selected_menu_item" :companies="this.companies"
+                @clicked_menu="clicked_menu"/>
+            </thead>
+            <tbody>
+                <ListItem class="list-item" :selected="(selected_list_item == index)? true : false" 
+                v-for="(company, index) in this.companies" :key="company" 
+                :company="company" :score="index" @click="clicked_item(index)"/>
+            </tbody>
+        </table>
     </div>
 </template>
 

@@ -65,3 +65,7 @@
 
     &.down { transform: scale(1) rotate(-90deg); }
 }
+
+.table-sm th {
+    padding: .3rem .1rem;
+}
