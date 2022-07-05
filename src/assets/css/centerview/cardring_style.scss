@@ -27,12 +27,12 @@ $pi: 3.1415;
 
   $ring-open-distance: map.get($ring-radius, (ring-radius#{$ring-number}) );
 
-  @for $i from 1 through $item-number {
+  @for $i from 1 through $item-number { // -2vmax is offset
     $opening-angle: calc( 
       asin( 
-        ( (100vmin - 15vmin)/2 ) /
+        ( (40vmax - 2vmax)/2 ) /
           $ring-open-distance
-        ) * 2 
+        ) * 2
     );
 
     $angle: ((0 - $opening-angle)/2)+(($opening-angle/($item-number - 1))*($i - 1));

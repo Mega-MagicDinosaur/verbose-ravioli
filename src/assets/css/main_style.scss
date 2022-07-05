@@ -40,9 +40,9 @@ $cards-offset: 0px;
 // warning: if radius ($cards-open-distance) is allowed to be less than centerview-height,
 // sass does not compile since asin (arcsin) of more than 1 is NaN.
 $ring-radius: (
-    ring-radius1: 55vmin,
-    ring-radius2: 105vmin,
-    ring-radius3: 155vmin,
+    ring-radius1: 25vmax,
+    ring-radius2: 50vmax,
+    ring-radius3: 75vmax,
 );
 
 $cards-menu-open-distance: 0px;
